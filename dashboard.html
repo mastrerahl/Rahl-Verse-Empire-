@@ -1,0 +1,32 @@
+<!-- dashboard.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Rahl Launchpad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>👑 Welcome to Your Dashboard</h1>
+    <p>Choose a tool to begin your creation journey</p>
+    <button onclick="logout()" class="btn">Logout</button>
+  </header>  <section class="features">
+    <div class="feature">
+      <h2>📝 Bio Generator</h2>
+      <p>Craft professional bios with AI.</p>
+      <a href="generator.html" class="btn">Launch</a>
+    </div>
+    <div class="feature">
+      <h2>🎯 Captions & Templates</h2>
+      <p>Get ready-to-use content for social media.</p>
+      <a href="generator.html" class="btn">Open</a>
+    </div>
+  </section>  <footer class="footer">
+    <p>&copy; 2025 Rahl Launchpad. All rights reserved.</p>
+  </footer>  <script src="firebase-config.js"></script>  <script src="app.js"></script></body>
+</html><!-- Additions to style.css (if not already included) -->.btn { display: inline-block; background-color: #1e3a8a; color: white; padding: 0.6rem 1.2rem; border-radius: 9999px; text-decoration: none; font-weight: 600; margin-top: 1rem; }
+
+.btn:hover { background-color: #3b82f6; }
+
+button.btn { border: none; font-size: 1rem; cursor: pointer; }
+
