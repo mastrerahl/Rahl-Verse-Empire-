@@ -1,0 +1,36 @@
+<!-- generator.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generator - Rahl Launchpad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>✨ Content Generator</h1>
+    <p>Select a category and generate your content</p>
+    <a href="dashboard.html" class="btn">Back to Dashboard</a>
+  </header>  <main class="generator">
+    <select id="typeSelector">
+      <option value="bio">🔥 Bio</option>
+      <option value="caption">📸 Caption</option>
+      <option value="template">📋 Template</option>
+    </select><textarea id="userInput" placeholder="Enter a few keywords..."></textarea>
+<button onclick="generateContent()" class="btn">Generate</button>
+
+<div id="outputBox">
+  <h3>Generated Output:</h3>
+  <p id="outputText">Your content will appear here...</p>
+</div>
+
+  </main>  <footer class="footer">
+    <p>&copy; 2025 Rahl Launchpad</p>
+  </footer>  <script src="firebase-config.js"></script>  <script src="app.js"></script></body>
+</html><!-- Additions to style.css -->.generator { max-width: 500px; margin: 2rem auto; padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); }
+
+select, textarea { width: 100%; padding: 0.75rem; margin: 1rem 0; border-radius: 0.5rem; border: 1px solid #ccc; font-size: 1rem; }
+
+#outputBox { margin-top: 2rem; text-align: left; }
+
+#outputText { background: #f3f4f6; padding: 1rem; border-radius: 0.5rem; font-size: 1rem; }
+
