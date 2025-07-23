@@ -1,45 +1,53 @@
-<!-- index.html --><!DOCTYPE html><html lang="en">
+<!-- signup.html --><!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rahl Launchpad</title>
+  <title>Signup - Rahl Launchpad</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <h1>👑 Rahl Launchpad</h1>
-    <p>Empowering African Creators Through WhatsApp</p>
-    <a href="signup.html" class="btn">Get Started</a>
-  </header>  <section class="features">
-    <div class="feature">
-      <h2>⚡ Fast Bio Generator</h2>
-      <p>Create powerful bios in seconds.</p>
-    </div>
-    <div class="feature">
-      <h2>💬 Captions & Templates</h2>
-      <p>Access trending caption packs.</p>
-    </div>
-    <div class="feature">
-      <h2>📱 WhatsApp Ready</h2>
-      <p>Use tools directly in WhatsApp.</p>
-    </div>
-  </section>  <footer class="footer">
-    <p>&copy; 2025 Rahl Launchpad. All rights reserved.</p>
-  </footer>
+  <div class="form-container">
+    <h2>Create Your Account</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
 </body>
-</html><!-- style.css -->body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f3f4f6; color: #1e3a8a; text-align: center; }
+</html><!-- login.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Rahl Launchpad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Welcome Back</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+  </div>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html><!-- Add to style.css -->.form-container { max-width: 400px; margin: 4rem auto; padding: 2rem; background: white; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: left; }
 
-.header { background-color: #1e3a8a; color: white; padding: 3rem 1rem; border-bottom-left-radius: 2rem; border-bottom-right-radius: 2rem; }
+.form-container h2 { text-align: center; color: #1e3a8a; margin-bottom: 1.5rem; }
 
-.header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+input[type="text"], input[type="email"], input[type="password"] { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 0.5rem; font-size: 1rem; }
 
-.header p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+button[type="submit"] { width: 100%; padding: 0.75rem; background-color: #1e3a8a; color: white; border: none; border-radius: 0.5rem; font-size: 1rem; font-weight: bold; cursor: pointer; }
 
-.btn { background-color: #3b82f6; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; }
+button[type="submit"]:hover { background-color: #3b82f6; }
 
-.features { display: grid; gap: 1.5rem; padding: 2rem 1rem; }
-
-.feature { background: white; border-radius: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05); padding: 1.5rem; }
-
-.footer { padding: 1rem; font-size: 0.875rem; color: #64748b; }
+.form-container p { text-align: center; margin-top: 1rem; font-size: 0.9rem; }
 
